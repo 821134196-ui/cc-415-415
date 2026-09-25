@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>水族馆投喂与设备点检系统</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">🐠</span>
+    <div>
+      <h1>水族馆投喂与点检</h1>
+      <p class="brand-sub">水槽 · 生物批次 · 饲料 · 投喂计划 · 过滤设备 · 水质 · 异常 · 交接</p>
+    </div>
+  </div>
+  <button id="reminderBell" class="bell-btn" title="到期提醒">
+    🔔<span id="reminderCount" class="badge hidden">0</span>
+  </button>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button class="tab active" data-view="tanks">水槽总览</button>
+  <button class="tab" data-view="calendar">投喂日历</button>
+  <button class="tab" data-view="feeds">饲料批次</button>
+  <button class="tab" data-view="equipment">设备点检</button>
+  <button class="tab" data-view="anomalies">异常观察</button>
+  <button class="tab" data-view="handoffs">交接日志</button>
+</nav>
+
+<main id="main"></main>
+
+<!-- 扫码模拟弹窗 -->
+<div id="scanModal" class="modal-mask hidden">
+  <div class="modal">
+    <h3 id="scanTitle">扫码</h3>
+    <p class="muted">模拟现场扫码枪：同一二维码重复扫描不会重复完成任务。</p>
+    <pre id="scanCode" class="scan-code"></pre>
+    <div class="modal-actions">
+      <button id="scanConfirm" class="btn btn-primary btn-lg">确认扫码完成</button>
+      <button id="scanCancel" class="btn btn-ghost btn-lg">取消</button>
+    </div>
+    <div id="scanResult" class="scan-result"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
