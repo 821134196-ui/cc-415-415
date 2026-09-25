@@ -2,6 +2,8 @@
 .env.*
 !.env.example
 node_modules/
+data/
+uploads/
 .venv/
 __pycache__/
 target/

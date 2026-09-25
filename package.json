@@ -1,0 +1,15 @@
+{
+  "name": "aquarium-ops",
+  "version": "1.0.0",
+  "private": true,
+  "description": "水族馆水槽投喂与设备点检系统（零依赖：node:sqlite + 内置 http）",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "reseed": "node --disable-warning=ExperimentalWarning src/server.js --reseed",
+    "test": "node --disable-warning=ExperimentalWarning --test"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}

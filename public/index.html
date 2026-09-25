@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>水族馆水槽投喂与设备点检系统</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo" aria-hidden="true">🐠</span>
+    <div>
+      <h1>水族馆运维台</h1>
+      <p>水槽投喂 · 设备点检 · 异常处置</p>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs" aria-label="主导航">
+    <button data-tab="overview" class="active">水槽总览</button>
+    <button data-tab="calendar">投喂日历</button>
+    <button data-tab="feeds">饲料批次</button>
+    <button data-tab="equipment">设备点检</button>
+    <button data-tab="anomalies">异常观察</button>
+    <button data-tab="handover">交接日志</button>
+  </nav>
+</header>
+
+<div id="reminder-bar" class="reminder-bar" hidden></div>
+
+<main id="main" class="main">
+  <div class="loading">加载中…</div>
+</main>
+
+<div id="modal-root"></div>
+<div id="toast-root" aria-live="polite"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
